@@ -30,6 +30,10 @@ require_once('controllers/user.controller.php');
          case 'descripcion':
              $PlatosController -> showDescripcion($param[1]);
              break;
+
+             case 'categoria':
+                $PlatosController -> showNacionalidad($param[1]);
+                break;
             
          case 'categoria':
              $PlatosController -> showPlatos($param[1]);

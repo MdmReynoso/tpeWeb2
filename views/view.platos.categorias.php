@@ -32,7 +32,7 @@ class PlatosCategoriasView extends View{
         $this->getSmarty()->display('templates/platos.tpl');
     }
     
-    //funcion para mostrar el detalle de un plato en particular
+    //funcion para mostrar la descripcion de un plato en particular
     public function detalle($plato, $categorias){
         $this->getSmarty()->assign('url', BASE_URL);
         $this->getSmarty()->assign('title','Descripcion');
@@ -40,6 +40,16 @@ class PlatosCategoriasView extends View{
         $this->getSmarty()->assign('plato', $plato);    
         
         $this->getSmarty()->display('templates/descripcion.tpl');
+    }
+
+      //funcion para mostrar la nacionalidad de un plato en particular
+      public function nacionalidad($plato, $categorias){
+        $this->getSmarty()->assign('url', BASE_URL);
+        $this->getSmarty()->assign('title','Nacionalidad');
+        $this->getSmarty()->assign('categorias', $categorias);
+        $this->getSmarty()->assign('plato', $plato);    
+        
+        $this->getSmarty()->display('templates/nacionalidad.tpl');
     }
 
     //funcion para mostrar la pagina de admin

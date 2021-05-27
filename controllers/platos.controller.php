@@ -40,6 +40,14 @@ class PlatosController{
         $this->view->detalle($plato, $categorias);
     }
 
+      //obtengo todos los platos pertenecientes a una misma nacionalidad y los muestro.
+      public function showNacionalidad($id){
+        $categorias = $this->modelcategorias->getAll();
+        $platos = $this->modelplatos->getbyID($id);
+
+        $this->view->platos($categorias, $platos);
+    }
+
     //obtengo todos los platos pertenecientes a una misma categoria y los muestro.
     public function showPlatos($id){
         $categorias = $this->modelcategorias->getAll();
