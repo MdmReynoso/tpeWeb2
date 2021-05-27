@@ -1,7 +1,7 @@
 <div class="container_formulario">
 
     <div class="formulario">
-        <form method="POST" action="agregarPais">
+        <form method="POST" action="agregarCategoria">
             <div class="titulo_formulario">
                 Agregar categoria
             </div>

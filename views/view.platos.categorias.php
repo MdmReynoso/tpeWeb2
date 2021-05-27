@@ -13,12 +13,11 @@ class PlatosCategoriasView extends View{
     
     //Funcion para mostrar el home
     public function home(){
-        //Le asigno la variabe url con la base y la de title con home que es lo que se va a ver 
-        //arriba en la ventana de mi navegador.
+      
         $this->getSmarty()->assign('url', BASE_URL);
         $this->getSmarty()->assign('title','Home');
         
-        //llamo al template a mostrar al usuarix.
+        //llamo al template a mostrar al usuario.
         $this->getSmarty()->display('templates/home.tpl');
     }
 
@@ -29,7 +28,7 @@ class PlatosCategoriasView extends View{
         $this->getSmarty()->assign('categorias', $categorias);
         $this->getSmarty()->assign('platos', $platos);
 
-        //llamo al template a mostrar al usuarix.
+        //llamo al template a mostrar al usuario.
         $this->getSmarty()->display('templates/platos.tpl');
     }
     
@@ -53,10 +52,9 @@ class PlatosCategoriasView extends View{
     }
 
     //funcion para mostrar la pagina de editar categoria
-    public function ShowEditCategoria($categorias, $error=null){
-        $this->getSmarty()->assign('url', BASE_URL);
+    public function ShowEditCategoria($categoria, $error=null){
         $this->getSmarty()->assign('title','Edit');
-        $this->getSmarty()->assign('categoria', $categorias);
+        $this->getSmarty()->assign('categoria', $categoria);
         $this->getSmarty()->assign('error', $error);
 
         $this->getSmarty()->display('templates/form.editar.categoria.tpl');
@@ -64,7 +62,6 @@ class PlatosCategoriasView extends View{
 
     //funcion para mostrar la pagina de editar plato
     public function ShowEditPlatos($plato, $error=null){
-        $this->getSmarty()->assign('url', BASE_URL);
         $this->getSmarty()->assign('title','Edit');
         $this->getSmarty()->assign('plato', $plato);
         $this->getSmarty()->assign('error', $error);

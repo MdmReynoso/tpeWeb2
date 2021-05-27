@@ -10,7 +10,7 @@ class Model {
     }
 
     public function create_connection() {
-        $db = new PDO('mysql:host=localhost;dbname=trabajo_web;charset=utf8', 'root', '');
+        $db = new PDO('mysql:host=localhost;dbname=comidas_unicen;charset=utf8', 'root', '');
         $host = 'localhost';
         $userName = 'root';
         $password = '';

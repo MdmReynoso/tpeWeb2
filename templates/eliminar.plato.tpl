@@ -7,10 +7,10 @@
             </div>
             <div class="fila_formulario">
 
-                <label for="destino"> Seleccionar plato: </label>
+                <label for="plato"> Seleccionar plato: </label>
                 <select name="plato">
                     {foreach from=$platos item=plato}
-                        <option value="{$destino->id}">{$plato->nombre}</option>
+                        <option value="{$plato->id}">{$plato->nombre}</option>
                     {/foreach}
                 </select>
             </div>

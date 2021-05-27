@@ -33,7 +33,7 @@ class PlatosModel extends Model{
      * Retorna todos los platos que compartan el id_categoria($id).
      */
     public function getbyID($id) {
-        $query = $this->getDb()->prepare('SELECT * FROM platos WHERE id_categorias = ? ORDER BY nombre ASC');
+        $query = $this->getDb()->prepare('SELECT * FROM platos WHERE id_categoria = ? ORDER BY nombre ASC');
         $query->execute([$id]);
         return $query->fetchAll(PDO::FETCH_OBJ);
     }
@@ -52,8 +52,8 @@ class PlatosModel extends Model{
      * @param $nombre, $descripcion, $nacionalidad
      * Agrega un plato en base al nombre, descripcion y nacionalidad pasados por parámetro
      */
-    public function agregar($categorias, $nombre, $detalle, $nacionalidad){
-         $query = $this->getDb()->prepare("INSERT INTO platos (nombre, descripcion, nacionalidad, id_categorias) VALUES (?, ?, ?, ?)");
+    public function agregar($categorias, $nombre, $descripcion, $nacionalidad){
+         $query = $this->getDb()->prepare("INSERT INTO platos (nombre, descripcion, nacionalidad, id_categoria) VALUES (?, ?, ?, ?)");
          $query->execute([$nombre, $descripcion, $nacionalidad]);
         
     }

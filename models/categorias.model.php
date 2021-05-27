@@ -6,7 +6,7 @@ class CategoriasModel extends Model{
 
     /**
      * 
-     * Retorna todos los categoriaes almacenados en la tabla categorias
+     * Retorna todos las categorias almacenadas en la tabla categorias
      */
     public function getAll() {
         $query = $this->getDb()->prepare('SELECT * FROM categorias ORDER BY nombre ASC');

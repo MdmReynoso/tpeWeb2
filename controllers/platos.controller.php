@@ -23,7 +23,7 @@ class PlatosController{
         
     }
     
-    //obtengo todos los categorias y los platos de la base de datos y
+    //obtengo todos las categorias y los platos de la base de datos y
     //se los mando a la vista para mostrarlos.
     public function showAllPlatos(){
         $categorias = $this->modelcategorias->getAll();
@@ -33,11 +33,11 @@ class PlatosController{
     }
 
     //obtengo todo la info de un plato en particular a partir de la id.
-    public function showDescricion($id){
-        $platos = $this->modelplatos->get($id);
+    public function showDescripcion($id){
+        $plato = $this->modelplatos->get($id);
         $categorias = $this->modelcategorias->getAll();
         
-        $this->view->detalle($platos, $categorias);
+        $this->view->detalle($plato, $categorias);
     }
 
     //obtengo todos los platos pertenecientes a una misma categoria y los muestro.
@@ -66,7 +66,7 @@ class PlatosController{
 
     $plato = $this->modelplatos->get($id);
     
-    $this->view->ShowEditPlatos($platos, $error);
+    $this->view->ShowEditPlatos($plato, $error);
     }
 
     //funcion para editar un plato,si esta vacio el nombre, vuelve a mostrar el formulario con un
@@ -82,7 +82,8 @@ class PlatosController{
             $this->modelplatos->edit($id, $nombre, $descripcion, $nacionalidad);
            
             header("Location: " . BASE_URL . 'platos');
-        } else
+        } 
+        else
             $this->ShowEditar($id, "Error, campos vacios");
     }
 
@@ -97,7 +98,8 @@ class PlatosController{
         if(!empty($nombre) && !empty($descripcion) && !empty($nacionalidad)){
             $this->modelplatos->agregar($categoria, $nombre, $descripcion, $nacionalidad);
             header("Location: " . BASE_URL . 'platos');
-        } else  $this->view->showError("No es posible agregar elementos vacios");
+        }
+         else  $this->view->showError("No es posible agregar elementos vacios");
     }
 
     //funcion para eliminar un plato que coincida con el id pasado por parametro 
@@ -109,7 +111,7 @@ class PlatosController{
         } 
 
         $this->modelplatos->eliminar($id);
-        header("Location: " . BASE_URL . 'plato');
+        header("Location: " . BASE_URL . 'platos');
     }
 
     public function showError($msg){

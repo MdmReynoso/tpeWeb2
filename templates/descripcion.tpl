@@ -3,7 +3,7 @@
     <div class="encabezado">
         {include file="nav.tpl"}
     </div>
-    <h1>{$destino->nombre}</h1>
+    <h1>{$plato->nombre}</h1>
     <div class="contenedor_platos">
         {include file="listacategorias.tpl"}
         {include file="tarjetadescripcion.tpl"}
