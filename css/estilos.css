@@ -1,0 +1,45 @@
+.logo {
+  width: 90%;
+  height: 35%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  header{
+  text-align-last:justify;
+  display: flex;
+  }
+
+   nav {
+      border-bottom: 4px solid #2e2e2e;
+      }
+      
+    .item {
+        list-style: none;
+  margin: 0px 10px;
+  color: white;
+  text-transform: uppercase;
+  padding: 15px;
+  
+      }
+      
+      .botones {
+        font-size: 30px;
+      text-decoration: none;
+      color: white;
+      }
+      
+      ul.navigation {
+      
+      height: 100%;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      background: black;
+      }
+      
