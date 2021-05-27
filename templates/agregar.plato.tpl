@@ -23,10 +23,10 @@
                 <input type="number" step="any" id="number" name="precio" value="">
             </div>
             <div class="fila_formulario">
-                <label for="detail"> Detalles: </label>
+                <label for="descripcion"> Descripcion: </label>
             </div>
             <div class="fila_formulario">
-                <textarea name="detail" cols="30" rows="10" placeholder="Especifique detalles del plato"></textarea>
+                <textarea name="descripcion" cols="30" rows="10" placeholder="Especifique una descripción del plato"></textarea>
             </div>
             <div class="fila_formulario">
                 <input type="submit" name="agregar" value="Cargar">

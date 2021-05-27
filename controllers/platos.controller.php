@@ -37,7 +37,7 @@ class PlatosController{
         $plato = $this->modelplatos->get($id);
         $categorias = $this->modelcategorias->getAll();
         
-        $this->view->detalle($plato, $categorias);
+        $this->view->descripcion($plato, $categorias);
     }
 
       //obtengo todos los platos pertenecientes a una misma nacionalidad y los muestro.
@@ -82,7 +82,7 @@ class PlatosController{
     public function editar(){
         $id = $_POST['plato'];
         $nombre = $_POST['nombre'];
-        $detail = $_POST['descripcion'];
+        $descripcion = $_POST['descripcion'];
         $precio = $_POST['nacionalidad'];
 
  

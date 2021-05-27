@@ -33,7 +33,7 @@ class PlatosCategoriasView extends View{
     }
     
     //funcion para mostrar la descripcion de un plato en particular
-    public function detalle($plato, $categorias){
+    public function descripcion($plato, $categorias){
         $this->getSmarty()->assign('url', BASE_URL);
         $this->getSmarty()->assign('title','Descripcion');
         $this->getSmarty()->assign('categorias', $categorias);
